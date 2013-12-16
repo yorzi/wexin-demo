@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<p>
+  <strong>Weibo:</strong>
+  <%= @person.weibo %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @person.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @person.email %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @person.description %>
+</p>
+
+<p>
+  <strong>Interest:</strong>
+  <%= @person.interest %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @person.twitter %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
