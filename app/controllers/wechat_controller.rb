@@ -6,9 +6,9 @@ class WechatController < ApplicationController
   end
 
   def create
-    Rails.logger "Create: ******************************"
-    Rails.logger params
-    Rails.logger "Create: ******************************"
+    logger.debug "Create: ******************************"
+    logger.debug params
+    logger.debug "Create: ******************************"
     render text: "ok"
   end
 
