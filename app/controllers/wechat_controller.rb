@@ -9,7 +9,9 @@ class WechatController < ApplicationController
     puts "Create: ******************************"
     puts params
     puts "Create: ******************************"
-    render text: "ok"
+    if params[:xml][:MsgType] == "text"
+      render "message", :formats => :xml
+    end
   end
 
   private
