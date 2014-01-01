@@ -6,6 +6,8 @@ WeixinDemo::Application.routes.draw do
 
   resources :wechat, :only => [:create]
 
+  get '/auth', to: "wechat#auth"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
