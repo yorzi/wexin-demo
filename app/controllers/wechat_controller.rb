@@ -6,9 +6,9 @@ class WechatController < ApplicationController
   end
 
   def create
-    logger.info "Create: ******************************"
-    logger.info params
-    logger.info "Create: ******************************"
+    puts "Create: ******************************"
+    puts params
+    puts "Create: ******************************"
     render text: "ok"
   end
 
