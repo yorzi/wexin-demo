@@ -3,6 +3,6 @@
     <FromUserName><![CDATA[<%= params[:xml][:ToUserName] %>]]></FromUserName>
     <CreateTime><%= Time.now.to_i %></CreateTime>
     <MsgType><![CDATA[text]]></MsgType>
-    <Content><![CDATA[My Response：<%= params[:xml][:Content] %> <%= "\u{1F389}" %><%= "\u{1F47B}" %>]]></Content>
+    <Content><![CDATA[My Response：<%= params[:xml][:Content] %> <%= "\u{1F389}" %><%= "\u{1F47B}" %> <a href="http://wangyaodi.com">Andy的博客</a>]]></Content>
     <FuncFlag>0</FuncFlag>
 </xml>

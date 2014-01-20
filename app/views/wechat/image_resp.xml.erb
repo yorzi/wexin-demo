@@ -2,7 +2,26 @@
     <ToUserName><![CDATA[<%= params[:xml][:FromUserName] %>]]></ToUserName>
     <FromUserName><![CDATA[<%= params[:xml][:ToUserName] %>]]></FromUserName>
     <CreateTime><%= Time.now.to_i %></CreateTime>
-    <MsgType><![CDATA[image]]></MsgType>
-    <PicUrl><![CDATA[<%= params[:xml][:PicUrl] %>]]></PicUrl>
-    <FuncFlag>0</FuncFlag>
+    <MsgType><![CDATA[news]]></MsgType>
+    <ArticleCount>2</ArticleCount>
+    <Articles>
+       <item>
+       <Title><![CDATA[<%= params[:xml][:Title] %>]]></Title> 
+       <Description><![CDATA[<%= params[:xml][:Description] %>]]></Description>
+       <PicUrl><![CDATA[<%= params[:xml][:Url] %>]]></PicUrl>
+       <Url><![CDATA[http://wangyaodi.com]]></Url>
+       </item>
+       <item>
+       <Title><![CDATA[Andy's Blog]]></Title> 
+       <Description><![CDATA[<%= params[:xml][:Description] %>]]></Description>
+       <PicUrl><![CDATA[<%= params[:xml][:Url] %>]]></PicUrl>
+       <Url><![CDATA[http://wangyaodi.com]]></Url>
+       </item>
+       <item>
+       <Title><![CDATA[]]></Title> 
+       <Description><![CDATA[<%= params[:xml][:Description] %>]]></Description>
+       <PicUrl><![CDATA[<%= params[:xml][:Url] %>]]></PicUrl>
+       <Url><![CDATA[http://wangyaodi.com]]></Url>
+       </item>
+    </Articles>
 </xml>
