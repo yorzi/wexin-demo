@@ -10,7 +10,21 @@ class WechatController < ApplicationController
     puts params
     puts "Create: ******************************"
     if params[:xml][:MsgType] == "text"
-      render "message", :formats => :xml
+      render "text_resp", :formats => :xml
+    elsif params[:xml][:MsgType] == "image"
+      render "image_resp", :formats => :xml
+    elsif params[:xml][:MsgType] == "location"
+      render "location_resp", :formats => :xml
+    elsif params[:xml][:MsgType] == "link"
+      render "link_resp", :formats => :xml
+    elsif params[:xml][:MsgType] == "event"
+      render "event_resp", :formats => :xml
+    elsif params[:xml][:MsgType] == "voice"
+      render "voice_resp", :formats => :xml
+    elsif params[:xml][:MsgType] == "video"
+      render "video_resp", :formats => :xml
+    else
+      raise ArgumentError, 'Unknown Message'
     end
   end
 
