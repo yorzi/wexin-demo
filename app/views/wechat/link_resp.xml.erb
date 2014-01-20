@@ -2,7 +2,9 @@
     <ToUserName><![CDATA[<%= params[:xml][:FromUserName] %>]]></ToUserName>
     <FromUserName><![CDATA[<%= params[:xml][:ToUserName] %>]]></FromUserName>
     <CreateTime><%= Time.now.to_i %></CreateTime>
-    <MsgType><![CDATA[text]]></MsgType>
-    <Content><![CDATA[My Response：<%= params[:xml][:Content] %> <%= "\u{1F389}" %><%= "\u{1F47B}" %>]]></Content>
+    <MsgType><![CDATA[link]]></MsgType>
+    <Title><![CDATA[<%= params[:xml][:Title] %>]]></Title>
+    <Description><![CDATA[<%= params[:xml][:Description] %>]]></Description>
+    <Url><![CDATA[<%= params[:xml][:Url] %>]]></Url>
     <FuncFlag>0</FuncFlag>
 </xml>
